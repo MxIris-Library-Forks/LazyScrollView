@@ -19,6 +19,8 @@
 @property (nonatomic, assign) CGRect absRect;
 @property (nonatomic, readonly) CGFloat top;
 @property (nonatomic, readonly) CGFloat bottom;
+@property (nonatomic, readonly) CGFloat left;
+@property (nonatomic, readonly) CGFloat right;
 
 /**
  Item view's unique ID in LazyScrollView.

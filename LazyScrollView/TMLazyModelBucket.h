@@ -27,5 +27,7 @@
 - (void)reloadModels:(NSSet<TMLazyItemModel *> *)itemModels;
 - (void)clear;
 - (NSSet<TMLazyItemModel *> *)showingModelsFrom:(CGFloat)startY to:(CGFloat)endY;
+- (NSSet<TMLazyItemModel *> *)visibleModelsFrom:(CGPoint)startPoint to:(CGPoint)endPoint;
+
 
 @end

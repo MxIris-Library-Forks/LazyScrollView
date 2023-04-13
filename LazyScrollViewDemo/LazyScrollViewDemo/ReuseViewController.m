@@ -60,16 +60,19 @@
     // Create a double column layout with 10 elements.
     for (int i = 0; i < 10; i++) {
         [self addRect:CGRectMake((i % 2) * (viewWidth - 20 + 3) / 2 + 10, i / 2 * 80 + currentY, (viewWidth - 20 - 3) / 2, 80 - 3) andUpdateMaxY:&maxY];
+        [self addRect:CGRectMake((i % 2) * (viewWidth - 20 + 3) / 2 + 10 + viewWidth, i / 2 * 80 + currentY, (viewWidth - 20 - 3) / 2, 80 - 3) andUpdateMaxY:&maxY];
     }
     // Create a single column layout with 10 elements.
     currentY = maxY + 10;
     for (int i = 0; i < 10; i++) {
         [self addRect:CGRectMake(10, i * 80 + currentY, viewWidth - 20, 80 - 3) andUpdateMaxY:&maxY];
+        [self addRect:CGRectMake(10 + viewWidth, i * 80 + currentY, viewWidth - 20, 80 - 3) andUpdateMaxY:&maxY];
     }
     // Create a double column layout with 10 elements.
     currentY = maxY + 10;
     for (int i = 0; i < 10; i++) {
         [self addRect:CGRectMake((i % 2) * (viewWidth - 20 + 3) / 2 + 10, i / 2 * 80 + currentY, (viewWidth - 20 - 3) / 2, 80 - 3) andUpdateMaxY:&maxY];
+        [self addRect:CGRectMake((i % 2) * (viewWidth - 20 + 3) / 2 + 10 + viewWidth, i / 2 * 80 + currentY, (viewWidth - 20 - 3) / 2, 80 - 3) andUpdateMaxY:&maxY];
     }
     
     // Create color array.
@@ -85,7 +88,7 @@
     }
     
     // STEP 3: reload LazyScrollView
-    scrollView.contentSize = CGSizeMake(viewWidth, maxY + 10);
+    scrollView.contentSize = CGSizeMake(viewWidth * 2, maxY + 10);
     [scrollView reloadData];
     
     // A tip.

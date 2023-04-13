@@ -82,7 +82,7 @@
  Item views which is in the buffer area.
  They will be shown soon.
  */
-@property (nonatomic, strong, readonly, nonnull) NSSet<UIView *> *visibleItems;
+@property (nonatomic, strong, readonly, nonnull) NSSet<UIView *> *visibleViews;
 
 /**
  Item views which is in the screen visible area.

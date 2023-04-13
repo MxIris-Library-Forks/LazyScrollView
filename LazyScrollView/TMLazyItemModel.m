@@ -19,4 +19,12 @@
     return CGRectGetMaxY(_absRect);
 }
 
+- (CGFloat)left {
+    return CGRectGetMinX(_absRect);
+}
+
+- (CGFloat)right {
+    return CGRectGetMaxX(_absRect);
+}
+
 @end
